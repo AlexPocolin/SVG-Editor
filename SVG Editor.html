@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Editor fotografii - Pocolin Alexandru Gabriel</title>
+    <link rel="stylesheet" href="4_1089_POCOLIN_ALEXANDRU_GABRIEL.css">
+</head>
+
+<body>
+    <header>
+        <h1>Editor fotografii</h1>
+    </header>
+
+    <main>
+        <form>
+            <label for="image-file">Upload an image:</label>
+            <input type="file" id="image-file" accept="image/*">
+            <label for="drag-drop-function">Drag&Drop your image</label>
+            
+        </form>
+
+        <div class="image-container">
+            <canvas id="image-canvas"></canvas>
+            <div id="image-preview"></div>
+        </div>
+
+        <div class="controls">
+            <div class="resize-controls">
+                <label for="resize-width">Width:</label>
+                <input type="number" id="resize-width">
+                <label for="resize-height">Height:</label>
+                <input type="number" id="resize-height">
+                <button id="resize-button">Resize</button>
+            </div>
+            <div class="crop-controls">
+                <button id="crop-button">Crop</button>
+            </div>
+
+            <div class="effect-controls">
+                <button id="effect-button">Apply effect:</button>
+                <select id="effect-select">
+                    <option value="none">Nothing</option>
+                    <option value="greyscale">Grey</option>
+                    <option value="invert">Color Inversion</option>
+                    <option value="darken">Twilight</option>
+                    <option value="contrast">Contrasing</option>
+                </select>
+            </div>
+
+            <div class="text-controls">
+                <label for="text-input">Text:</label>
+                <input type="text" id="text-input">
+                <label for="text-size-input">Dimension:</label>
+                <input type="number" id="text-size-input" value="24">
+                <label for="text-color-input">Color:</label>
+                <input type="color" id="text-color-input" value="#000000">
+                <label for="text-x-input">Position X:</label>
+                <input type="number" id="text-x-input" value="0">
+                <label for="text-y-input">Position Y:</label>
+                <input type="number" id="text-y-input" value="0">
+                <button id="add-text-button">Add text</button>
+            </div>
+        </div>
+        <div class="save-controls">
+            <button id="save-button">SAVE</button>
+        </div>
+        <div>
+            <canvas id="histogram-canvas"></canvas>
+        </div>
+    </main>
+    <script src="4_1089_POCOLIN_ALEXANDRU_GABRIEL.js"></script>
+</body>
+
+</html>
